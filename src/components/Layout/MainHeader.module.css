@@ -17,3 +17,24 @@
   margin: 0;
   padding: 0;
 }
+
+.actions-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.button {
+  background-color: transparent;
+  border-color: #463be7;
+  color: #463be7;
+}
+
+.button:hover,
+.button:active {
+  color: white;
+}
+
+.button span {
+  margin: 0 0.5rem;
+}

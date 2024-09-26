@@ -1,8 +1,20 @@
+import { useDispatch } from 'react-redux';
 import classes from './CartItem.module.css';
-
+import { cartActions } from '../../store/cart';
 const CartItem = (props) => {
-  const { title, quantity, total, price } = props.item;
-
+  const { productId, title, quantity, total, price } = props.item;
+  console.log(props.item);
+  const dispatch = useDispatch()
+  const onIncrease = () => {
+    dispatch(cartActions.addToCart({
+      item: {...props.item}
+    }))
+  }
+  const onDecrease = () => {
+    dispatch(cartActions.removeFromCart({
+      productId 
+    }))
+  }
   return (
     <li className={classes.item}>
       <header>
@@ -17,8 +29,8 @@ const CartItem = (props) => {
           x <span>{quantity}</span>
         </div>
         <div className={classes.actions}>
-          <button>-</button>
-          <button>+</button>
+          <button onClick={onDecrease}>-</button>
+          <button onClick={onIncrease}>+</button>
         </div>
       </div>
     </li>
