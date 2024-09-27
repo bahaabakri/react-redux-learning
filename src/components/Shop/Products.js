@@ -8,27 +8,27 @@ const Products = (props) => {
       <ul>
         <ProductItem
           productId = '1'
-          title='Test'
+          title='I phone 16'
           price={6}
           description='This is a first product - amazing!'
         />
         <ProductItem
           productId = '2'
-          title='Test'
-          price={6}
-          description='This is a first product - amazing!'
+          title='Samsung Galaxy S24'
+          price={12}
+          description='This is a second product - amazing!'
         />
         <ProductItem
           productId = '3'
-          title='Test'
-          price={6}
-          description='This is a first product - amazing!'
+          title='Huawei P60'
+          price={16}
+          description='This is a third product - amazing!'
         />
         <ProductItem
           productId = '4'
-          title='Test'
-          price={6}
-          description='This is a first product - amazing!'
+          title='Samsung A71'
+          price={3.5}
+          description='This is a fourth product - amazing!'
         />
       </ul>
     </section>
